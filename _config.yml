@@ -1,15 +1,71 @@
-title: Lee-s-Tech-Blog
-description: Hoseok's Tech Blog!
-remote_theme: just-the-docs/just-the-docs
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-url: https://bravohoseok.github.io/Lee-s-Tech-Blog
+title: Lee's Tech Blog
+email: embedevlee@gmail.com
+description: Lee's Tech Blog for Embedded Software
+#baseurl: "https://github.com/BravoHoseok/Lee-s-Tech-Blog"
+url: "https://bravohoseok.github.io/Lee-s-Tech-Blog"
+github_username: bravohoseok
 
-repository: Lee-s-Tech-Blog # for github-metadata
+# Build settings
+theme: just-the-docs #minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
 
+permalink: pretty
+
+exclude:
+ # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+ # specific to the theme website:
+   - bin/
+   - lib/
+   - "*.gemspec"
+   - "*.gem"
+   - LICENSE.txt
+   - package.json
+   - package-lock.json
+   - Rakefile
+   - README.md
+   - CODE_OF_CONDUCT.md
+   - docker-compose.yml
+   - Dockerfile
+ # theme test code
+   - fixtures/
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
-favicon_ico: "/assets/images/favicon.png"
+favicon_ico: "/assets/images/favicon.ico"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -60,8 +116,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Lee-s-Tech-Blog":
-    - "https://github.com/bravohoseok/Lee-s-Tech-Blog/"
+  "Lee's Tech Blog":
+    - "https://github.com/BravoHoseok/Lee-s-Tech-Blog"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -71,9 +127,9 @@ aux_links_new_tab: false
 nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
-#nav_external_links:
-#  - title: Just the Docs on GitHub
-#    url: https://github.com/just-the-docs/just-the-docs
+nav_external_links:
+  - title: Lee's Tech Blog
+    url: https://github.com/BravoHoseok/Lee-s-Tech-Blog
 
 # Footer content
 # appears at the bottom of every page's main content
@@ -93,13 +149,13 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/BravoHoseok/Lee-s-Tech-Blog" # the github URL for your repo
+gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-color_scheme: dark
+color_scheme: nil
 
 callouts_level: quiet # or loud
 callouts:
@@ -123,11 +179,6 @@ callouts:
 # Note: the main Just the Docs site does *not* use Google Analytics.
 # ga_tracking: UA-2709176-10,G-5FG1HLH3XQ
 # ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-github-metadata
-  - jekyll-include-cache
 
 kramdown:
   syntax_highlighter_opts:
