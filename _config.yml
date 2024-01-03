@@ -1,11 +1,12 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Lee-s-Tech-Blog
+description: Hoseok's Tech Blog!
 theme: just-the-docs
 
-url: https://bravohoseok.github.io
+url: https://bravohoseok.github.io/Lee-s-Tech-Blog
 
 aux_links:
   Template Repository: https://github.com/bravohoseok/Lee-s-Tech-Blog/
 
 repository: Lee-s-Tech-Blog # for github-metadata
 permalink: pretty
+
