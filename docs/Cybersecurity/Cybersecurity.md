@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cybersecufity
+title: Topic_Cybersecurity
 nav_order: 3
 has_children: true
 permalink: /docs/Cybersecurity
