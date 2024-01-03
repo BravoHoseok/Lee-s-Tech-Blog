@@ -7,7 +7,5 @@ url: https://bravohoseok.github.io
 aux_links:
   Template Repository: https://github.com/bravohoseok/Lee-s-Tech-Blog/
 
-
-url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: Lee-s-Tech-Blog # for github-metadata
 permalink: pretty
