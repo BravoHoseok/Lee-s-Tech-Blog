@@ -1,5 +1,5 @@
 ---
-layout: default
+layouts: default
 title: Lee's Tech Blog
 nav_order: 1
 description: "description"
