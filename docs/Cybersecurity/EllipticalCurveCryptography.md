@@ -25,8 +25,6 @@ Elliptical Curve Cryptography (ECC) is a type of the trapdoor function. In theor
     <br><b>[Pic.1]Trapdoor</b>
 </figure>
 
-![Trapdoor](/asset/images/Trapdoor_pic.jpg "Trapdoor")
-
 ## Reference
 Please refer to the listed reference below. That help you understand what is ECC.
 - [ECC Overview]
