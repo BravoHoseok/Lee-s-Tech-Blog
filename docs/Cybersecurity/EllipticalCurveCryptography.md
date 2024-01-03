@@ -21,7 +21,7 @@ nav_order: 1
 Elliptical Curve Cryptography (ECC) is a type of the trapdoor function. In theoretical computer science and cryptography, the trapdoor function is a function that is easy to compute in one direction, yet difficult to compute in the opposite direction (finding its inverse) without special information, called the "Trapdoor". In Publick Key Infrastructure (PKI) using ECC, the "Trapdoor" shall be the 'public key'. For example, In <b>Pic.1</b>, the given <b>'t'</b> shall be the public key. Thus, the main purpose of the usage of ECC is to create the public key by feeding a private key which is generated randomly (e.g., 32 bytes positive integer) into ECC function.
 
 <p align="center">
-    <img width="400" src="/asset/images/Trapdoor_pic.jpg" title="Trapdoor">
+    <img width="400" src="https://github.com/BravoHoseok/Lee-s-Tech-Blog/tree/main/asset/images/Trapdoor_pic.jpg" title="Trapdoor">
     <br><b>[Pic.1]Trapdoor</b>
 </p>
 
