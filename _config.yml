@@ -64,8 +64,8 @@ exclude:
    - fixtures/
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
-favicon_ico: "/assets/images/favicon.ico"
+#logo: "/asset/images/favicon.jpg"
+favicon_ico: "/asset/images/favicon.jpg"
 
 # Enable or disable the site search
 # Supports true (default) or false
