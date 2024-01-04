@@ -3,6 +3,13 @@ layout: default
 title: 0_Elliptical Curve Cryptography (ECC)
 parent: Topic_Cybersecurity
 nav_order: 1
+header-includes: |
+    \usepackage{tikz,pgfplots}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhead[CO,CE]{This is fancy}
+    \fancyfoot[CO,CE]{So is this}
+    \fancyfoot[LE,RO]{\thepage}
 ---
 
 # Elliptical Curve Cryptography (ECC)
@@ -17,7 +24,6 @@ nav_order: 1
 ---
 
 ## Definition
-
 Elliptical Curve Cryptography (ECC) is a type of the trapdoor function. In theoretical computer science and cryptography, the trapdoor function is a function that is easy to compute in one direction, yet difficult to compute in the opposite direction (finding its inverse) without special information, called the "Trapdoor". In Publick Key Infrastructure (PKI) using ECC, the "Trapdoor" shall be the 'public key'. For example, In <b>Pic.1</b>, the given <b>'t'</b> shall be the public key. Thus, the main purpose of the usage of ECC is to create the public key by feeding a private key which is generated randomly (e.g., 32 bytes positive integer) into ECC function.
 
 <p align="center">
@@ -35,6 +41,11 @@ Please refer to the listed reference below. That help you understand what is ECC
 ## Deep Dive
 1. <b>Elliptical Curve Cryptography</b>
     * The elliptical curve of ECC is based on the mathmetical function in the finite field, which contains a finite number of elements. Thus, the result of the operations of multiplication, addition, subtraction and division meet the rules of arithmetic known as the field axioms. The most common examples of finite fields are given by the integers mod p, which is a prime/binary number.
+    * The trapdoor function of ECC can be defined as 
+    * which ranging from 0 to (prime — 1). It means that there are no neative integers.
+
+
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 ---
 [ECC Overview]:https://www.youtube.com/watch?v=dCvB-mhkT0w
