@@ -3,13 +3,6 @@ layout: default
 title: 0_Elliptical Curve Cryptography (ECC)
 parent: Topic_Cybersecurity
 nav_order: 1
-header-includes: |
-    \usepackage{tikz,pgfplots}
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhead[CO,CE]{This is fancy}
-    \fancyfoot[CO,CE]{So is this}
-    \fancyfoot[LE,RO]{\thepage}
 ---
 
 # Elliptical Curve Cryptography (ECC)
@@ -28,7 +21,7 @@ Elliptical Curve Cryptography (ECC) is a type of the trapdoor function. In theor
 
 <p align="center">
     <img src="../../../asset/images/Trapdoor.jpg" width="400"/>
-    <br><b>[Pic.1]Trapdoor</b>
+    <br><b>[Pic.1] Trapdoor</b>
 </p>
 
 ## Reference
@@ -41,11 +34,42 @@ Please refer to the listed reference below. That help you understand what is ECC
 ## Deep Dive
 1. <b>Elliptical Curve Cryptography</b>
     * The elliptical curve of ECC is based on the mathmetical function in the finite field, which contains a finite number of elements. Thus, the result of the operations of multiplication, addition, subtraction and division meet the rules of arithmetic known as the field axioms. The most common examples of finite fields are given by the integers mod p, which is a prime/binary number.
-    * The trapdoor function of ECC can be defined as 
-    * which ranging from 0 to (prime — 1). It means that there are no neative integers.
+    * The trapdoor function of ECC can be defined as <b>Pic.2</b>. This function is ranging from 0 to (prime - 1). It means that there are no neative integers.
+    * <p align="center">
+    <img src="../../../asset/images/TrapdoorEq.jpg" width="300"/>
+    <br><b>[Pic.2] Trapdoor Function</b></p>
+    * Elliptical curve parameters (a, b) defines the property of the curve. For example, the parameter of secp256k curve is a = 0, b = 7 and the property of this curve is shown in <b>Pic.3</b>.
+    * <p align="center">
+    <img src="../../../asset/images/EllipticalCurve.jpg" width="300"/>
+    <br><b>[Pic.3] Elliptical Curve</b></p>
+2. <b>Dot Operand</b>
+    * The dot operand is a protocol to calculate a point on the elliptical curve. For example, we have two points (A, B) and draw a straight line that intersects ‘A’ and ‘B’. Then, another point ‘C’ that the intersecting line is made on the curve will be shown. Fianlly, we do x-axis symmetric transposition with the point ‘C’. As a result, we get the point ‘D’. This is 1 time dot operation.
+    * <p align="center">
+    <img src="../../../asset/images/DotOperand.jpg" width="300"/>
+    <br><b>[Pic.4] Dot Operand</b></p>
+    * 'n' times dot operation means that we do 1 time dot operation by 'n' times. With this principle, we genearte <b>'Private and Public'</b> key.
+3. <b>ECC Domain Parameter</b>
+    * <b>p:</b> modulo prime number.
+    * <b>a:</b> coefficient of the elliptical curve.
+    * <b>b:</b> coefficient of the elliptical curve.
+    * <b>G:</b> base point on the curve, which is already known according to the type of curve.
+    * <b>n:</b> order of point G, which makes G infinite. Ideally, the maximum size of a private key should be ’n’ satisfiying the below equation.
+    * <p align="center">
+    <img src="../../../asset/images/InfiniteEq.jpg" width="80"/>
+    <br><b>[Pic.5] Satisfaction Condition</b></p>
+    * <b>H:</b> the Cofactor
+4. Example of domain parameter (secp256k1)
+```scss
+p: FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFC2F
+a: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+b: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000007
+G: 02 79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9 59F2815B 16F81798
+n: FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE BAAEDCE6 AF48A03B BFD25E8C D0364141
+h: 01
+```
 
-
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+{: .highlight }
+Parameters we saw are nothing but positive integer. For better understanding, they are just utilized for a sepcific computation in ECC. What parameters should be used shall be defined in Certificate isseud by the trusted authrotiy. Thus, accoring to the security policy, that parameters shall be different.
 
 ---
 [ECC Overview]:https://www.youtube.com/watch?v=dCvB-mhkT0w
