@@ -58,7 +58,8 @@ Please refer to the listed reference below. That help you understand what is ECC
     <img src="../../../asset/images/InfiniteEq.jpg" width="80"/>
     <br><b>[Pic.5] Satisfaction Condition</b></p>
     * <b>H:</b> the Cofactor
-4. Example of domain parameter (secp256k1)
+
+## Example of domain parameter (secp256k1)
 ```scss
 p: FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFC2F
 a: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
