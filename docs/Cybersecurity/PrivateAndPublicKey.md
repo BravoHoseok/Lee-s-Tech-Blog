@@ -105,7 +105,6 @@ Please refer to the listed reference below. That help you understand what is Pri
 1. <b><span style="color:Gray;">Public Key Infrastructure (PKI):</span></b> PKI is usually designed around a centralized and trusted component called the Certificate Authority (CA), which binds and unbinds entities to their public keys by issuing and revoking digital certificates, and also functions as the repository for active digital certificates.
 2. <b><span style="color:Gray;">Public Key Cryptography Standards (PKCS):</span></b>  The Public-Key Cryptography Standards (PKCS) comprise a group of cryptographic standards that provide guidelines and application programming interfaces (APIs) for the usage of cryptographic methods. As the name PKCS suggests, these standards put an emphasis on the usage of public key (that is, asymmetric) cryptography.
 
----
 [PRNG Overview]:https://www.youtube.com/watch?v=q2XVhTWJ-Oo
 [PRNG Mathmetical Explanation]:https://www.math.arizona.edu/~tgk/mc/book_chap3.pdf
 [PRNG Wikipedia]:https://en.wikipedia.org/wiki/Pseudorandom_number_generator
