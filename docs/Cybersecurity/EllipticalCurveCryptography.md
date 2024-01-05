@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 0_Elliptical Curve Cryptography (ECC)
+title: 0_Elliptic Curve Cryptography (ECC)
 parent: Topic_Cybersecurity
 nav_order: 1
 ---
 
-# Elliptical Curve Cryptography (ECC)
+# Elliptic Curve Cryptography (ECC)
 {: .no_toc }
 
 ## Table of contents
@@ -17,7 +17,7 @@ nav_order: 1
 ---
 
 ## Definition
-Elliptical Curve Cryptography (ECC) is a type of the trapdoor function. In theoretical computer science and cryptography, the trapdoor function is a function that is easy to compute in one direction, yet difficult to compute in the opposite direction (finding its inverse) without special information, called the "Trapdoor". In Publick Key Infrastructure (PKI) using ECC, the "Trapdoor" shall be the 'public key'. For example, In <b>Pic.1</b>, the given <b>'t'</b> shall be the public key. Thus, the main purpose of the usage of ECC is to create the public key by feeding a private key which is generated randomly (e.g., 32 bytes positive integer) into ECC function.
+Elliptic Curve Cryptography (ECC) is a type of the trapdoor function. In theoretical computer science and cryptography, the trapdoor function is a function that is easy to compute in one direction, yet difficult to compute in the opposite direction (finding its inverse) without special information, called the "Trapdoor". In Publick Key Infrastructure (PKI) using ECC, the "Trapdoor" shall be the 'public key'. For example, In <b>Pic.1</b>, the given <b>'t'</b> shall be the public key. Thus, the main purpose of the usage of ECC is to create the public key by feeding a private key which is generated randomly (e.g., 32 bytes positive integer) into ECC function.
 
 <p align="center">
     <img src="../../../asset/images/Trapdoor.jpg" width="400"/>
@@ -33,18 +33,18 @@ Please refer to the listed reference below. That help you understand what is ECC
 - [Dot Operand Law]
 
 ## Deep Dive
-1. <b>Elliptical Curve Cryptography</b>
-    * The elliptical curve of ECC is based on the mathmetical function in the finite field, which contains a finite number of elements. Thus, the result of the operations of multiplication, addition, subtraction and division meet the rules of arithmetic known as the field axioms. The most common examples of finite fields are given by the integers mod p, which is a prime/binary number.
+1. <b>Elliptic Curve Cryptography</b>
+    * The elliptic curve of ECC is based on the mathmetical function in the finite field, which contains a finite number of elements. Thus, the result of the operations of multiplication, addition, subtraction and division meet the rules of arithmetic known as the field axioms. The most common examples of finite fields are given by the integers mod p, which is a prime/binary number.
     * The trapdoor function of ECC can be defined as <b>Pic.2</b>. This function is ranging from 0 to (prime - 1). It means that there are no neative integers.
     * <p align="center">
     <img src="../../../asset/images/TrapdoorEq.jpg" width="300"/>
     <br><b>[Pic.2] Trapdoor Function</b></p>
-    * Elliptical curve parameters (a, b) defines the property of the curve. For example, the parameter of secp256k curve is a = 0, b = 7 and the property of this curve is shown in <b>Pic.3</b>.
+    * Elliptic curve parameters (a, b) defines the property of the curve. For example, the parameter of secp256k curve is a = 0, b = 7 and the property of this curve is shown in <b>Pic.3</b>.
     * <p align="center">
     <img src="../../../asset/images/EllipticalCurve.jpg" width="300"/>
-    <br><b>[Pic.3] Elliptical Curve</b></p>
+    <br><b>[Pic.3] Elliptic Curve</b></p>
 2. <b>Dot Operand</b>
-    * The dot operand is a protocol to calculate a point on the elliptical curve. For example, we have two points (A, B) and draw a straight line that intersects ‘A’ and ‘B’. Then, another point ‘C’ that the intersecting line is made on the curve will be shown. Fianlly, we do x-axis symmetric transposition with the point ‘C’. As a result, we get the point ‘D’. This is 1 time dot operation.
+    * The dot operand is a protocol to calculate a point on the elliptic curve. For example, we have two points (A, B) and draw a straight line that intersects ‘A’ and ‘B’. Then, another point ‘C’ that the intersecting line is made on the curve will be shown. Fianlly, we do x-axis symmetric transposition with the point ‘C’. As a result, we get the point ‘D’. This is 1 time dot operation.
     * <p align="center">
     <img src="../../../asset/images/DotOperand.jpg" width="300"/>
     <br><b>[Pic.4] Dot Operand</b></p>
@@ -52,8 +52,8 @@ Please refer to the listed reference below. That help you understand what is ECC
     * Dot Operand has more complex law than the above simple explanation. More details can be found at section 2.1 Geometric addition in [Dot Operand Law] document. 
 3. <b>ECC Domain Parameter</b>
     * <b>p:</b> modulo prime number.
-    * <b>a:</b> coefficient of the elliptical curve.
-    * <b>b:</b> coefficient of the elliptical curve.
+    * <b>a:</b> coefficient of the elliptic curve.
+    * <b>b:</b> coefficient of the elliptic curve.
     * <b>G:</b> base point on the curve, which is already known according to the type of curve.
     * <b>n:</b> order of point G, which makes G infinite. Ideally, the maximum size of a private key should be ’n’ satisfiying the below equation.
     * <p align="center">
