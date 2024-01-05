@@ -2,7 +2,7 @@
 layout: default
 title: 0_Elliptic Curve Cryptography (ECC)
 parent: Topic_Cybersecurity
-nav_order: 2
+nav_order: 3
 ---
 
 # Elliptic Curve Cryptography (ECC)

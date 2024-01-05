@@ -18,7 +18,5 @@ This is my prsonal blog containing technical information related to Embedded Sof
 [Go Linkedin][hoseok-linkedin]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Go portfolio][bravohoseok-portfolio]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
----
-
 [hoseok-linkedin]: https://www.linkedin.com/in/hoseoklee/
 [bravohoseok-portfolio]: https://bravohoseok.github.io/Portfolio/

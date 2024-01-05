@@ -2,7 +2,7 @@
 layout: default
 title: 3_Tag Length Value (TLV)
 parent: Topic_Cybersecurity
-nav_order: 5
+nav_order: 10
 ---
 
 # Private and Public Key
