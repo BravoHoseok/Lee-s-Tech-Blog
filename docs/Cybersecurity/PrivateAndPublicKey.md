@@ -49,17 +49,18 @@ Please refer to the listed reference below. That help you understand what is Pri
 - [DRNG Explanation]
 - [NIST]
 - [PRNG KOR Explaination]
+
 ## Deep Dive
 1. <b>Random Number</b>
-    * Before diving into private key, we need to look at the meaning of Random Number, because a private key is generated based on randomness.
-    * As definition, Random Number is either Pseudo-random or a number generated for, or part of, a set exhibiting statistical <b>randomness</b> in mathematics and statics.
-    * Random Number has the following properites
-      * <b><span style="color:Gray;">Randomness:</span></b> Randomness is the apparent or actual lack of definite pattern or predictability in information. It means that there is no order and does not follow a deterministic pattern. Mote Carlo method is one of the example that relies on random input.
-      * <b><span style="color:Gray;">Unpredictability:</span></b> Whatever someone uses any kind of information or method, no one can predict the next result.
-      * <b><span style="color:Gray;">Impossilbe Reconstruction:</span></b> Same result shouldn't be represent.
-    * Type of Random Number
-      * <b><span style="color:Gray;">Deterministic Random Number Generator (DRNG):</span></b> It generates a deterministic random number.
-        * <b>Pros</b>
+   * Before diving into private key, we need to look at the meaning of Random Number, because a private key is generated based on randomness.
+   * As definition, Random Number is either Pseudo-random or a number generated for, or part of, a set exhibiting statistical <b>randomness</b> in mathematics and statics.
+   * Random Number has the following properites
+     * <b><span style="color:Gray;">Randomness:</span></b> Randomness is the apparent or actual lack of definite pattern or predictability in information. It means that there is no order and does not follow a deterministic pattern. Mote Carlo method is one of the example that relies on random input.
+     * <b><span style="color:Gray;">Unpredictability:</span></b> Whatever someone uses any kind of information or method, no one can predict the next result.
+     * <b><span style="color:Gray;">Impossilbe Reconstruction:</span></b> Same result shouldn't be represent.
+   * Type of Random Number
+     * <b><span style="color:Gray;">Deterministic Random Number Generator (DRNG):</span></b> It generates a deterministic random number.
+       * <b>Pros</b>
           * No dedicated hardware is required.
           * Implementations can be done in software.
           * Identical seed values imply identical random numbers which is a necessary condition for using them as stream ciphers.
@@ -70,28 +71,28 @@ Please refer to the listed reference below. That help you understand what is Pri
           * They may behave as output sequence of an ideal RNG at most with respect to certain aspects.
           * The internal state has to be protected even if the device is not active.
         {: .highlight } 
-      * <b><span style="color:Gray;">True Random Number Generator (TRNG):</span></b> It generates Random Number based on a physical process capable of producing entropy. The higher the entropy is, The higer the randomness. Nature provides ample phenomena that generate low-level, statistically random "noise" signals, including thermal and shot noise, jitter and metastability of electronic circuits. So, Hardware Random Number Generator uses this feature to generate TRNG.
-      * <b><span style="color:Gray;">Pseudo Random Number Generator (PRNG):</span></b> It has a model that minics generating Random Number based on a <b>'deterministic'</b> algorithm. In other word, it tries to imbue randomness property with deterministic algorithm. <b>'Deterministic'</b> means that it needs a specific input to generate a random number. When look at the generation of tons of random number, you may notify a pattern. The seed of PRNG is extracted from TRNG, which means that the input which will be fed into PRNG also has the randomness.
-      * <b><span style="color:Gray;">Cryptographically Secure Pseudo Random Number Generator (CSPRNG):</span></b> CSPRNG is random generators, which guarantee that the random numbers coming from them are absolutely unpredictable. CSPRNG satisfy the next bit test and withstand the state compromise extensions and are typically part of the operating system or come from secure external source. Depending on the level of security required, CSPRNG can be implemented as software components or as hardware devices or as combination of both.
+     * <b><span style="color:Gray;">True Random Number Generator (TRNG):</span></b> It generates Random Number based on a physical process capable of producing entropy. The higher the entropy is, The higer the randomness. Nature provides ample phenomena that generate low-level, statistically random "noise" signals, including thermal and shot noise, jitter and metastability of electronic circuits. So, Hardware Random Number Generator uses this feature to generate TRNG.
+     * <b><span style="color:Gray;">Pseudo Random Number Generator (PRNG):</span></b> It has a model that minics generating Random Number based on a <b>'deterministic'</b> algorithm. In other word, it tries to imbue randomness property with deterministic algorithm. <b>'Deterministic'</b> means that it needs a specific input to generate a random number. When look at the generation of tons of random number, you may notify a pattern. The seed of PRNG is extracted from TRNG, which means that the input which will be fed into PRNG also has the randomness.
+     * <b><span style="color:Gray;">Cryptographically Secure Pseudo Random Number Generator (CSPRNG):</span></b> CSPRNG is random generators, which guarantee that the random numbers coming from them are absolutely unpredictable. CSPRNG satisfy the next bit test and withstand the state compromise extensions and are typically part of the operating system or come from secure external source. Depending on the level of security required, CSPRNG can be implemented as software components or as hardware devices or as combination of both.
 2. <b>Private Key</b>
     * Private key is generated by 'n' times 'dot' operation in ECC, giving randomness property to the private key. It menas that the 'n' is randomly generated integer value (PRNG).
     * The private key can be genreated by random number generator, but, for certificate and digital signature, ECC combined with random number generator is preferable.
     * Given at the meaning of Rondom number expained above and the property of ECC, it is hard for attackers to predict the generated private key in this way without directly accessing a storage having the private key.
     * Private Key can be used in symmetric cryptography system, but assymetric cryptography system (public key cryptography) is more secure approach in the real world.
-1. <b>Public Key</b>
-   *  By understanding the definition of private and public key and the meaning of random number, we learned that 'public key' stems from 'private key'. The public key shall not be used solely as itself. Please don't be confused that public key system is using this key only.
-   *  Let's take a look at the definition of Public Key Cryptography.
-      *  <b><span style="color:Gray;">Public Key Cryptography (PKC):</span></b> A well-established way to provide an authentication service. An entity is represented with a pair of keys (a publick key, a private key). The public key is used as the ID of the entity while the private key is used to prove the ownership of the public key. The public key is disseminated in the form of a digital certificate that binds the entity’s identity to the entity’s public key. A published pair keys shall be unique.
-      {: .highlight }
-   *  In sum, PKC is using a pair of private and public key. Thus, a public key will be generated in a way that
-      *  PRNG generates a private key and 'n' parameter of ECC.
-      *  Define ECC Domain Parameters (normally specified in a Certificate).
-      *  Feed the generated private key into ECC.
-      *  Execute Dot Operand (n times).
-      *  Extract x and y coordinates of the final point of ECC. The result shall be a generated public key.
-      *  The real example of private and public key is shown in <b>[Pic.2]</b>
-   *  Based on PKC, you will face two famous crypto algorithm. 'RSA Public Key Algorithm' and Elliptic Curve Digital Signature Algorithm (ECDSA)'
-   *  So, as long as a issued certificate to a user is not hijacked by attackers, it is hard for them to break this cryptography system theoretically.
+3. <b>Public Key</b>
+   * By understanding the definition of private and public key and the meaning of random number, we learned that 'public key' stems from 'private key'. The public key shall not be used solely as itself. Please don't be confused that public key system is using this key only.
+   * Let's take a look at the definition of Public Key Cryptography.
+     * <b><span style="color:Gray;">Public Key Cryptography (PKC):</span></b> A well-established way to provide an authentication service. An entity is represented with a pair of keys (a publick key, a private key). The public key is used as the ID of the entity while the private key is used to prove the ownership of the public key. The public key is disseminated in the form of a digital certificate that binds the entity’s identity to the entity’s public key. A published pair keys shall be unique.
+     {: .highlight }
+   * In sum, PKC is using a pair of private and public key. Thus, a public key will be generated in a way that
+     * PRNG generates a private key and 'n' parameter of ECC.
+     * Define ECC Domain Parameters (normally specified in a Certificate).
+     * Feed the generated private key into ECC.
+     * Execute Dot Operand (n times).
+     * Extract x and y coordinates of the final point of ECC. The result shall be a generated public key.
+     * The real example of private and public key is shown in <b>[Pic.2]</b>
+   * Based on PKC, you will face two famous crypto algorithm. 'RSA Public Key Algorithm' and Elliptic Curve Digital Signature Algorithm (ECDSA)'
+   * So, as long as a issued certificate to a user is not hijacked by attackers, it is hard for them to break this cryptography system theoretically.
 
 ## Example of Private and Public Key
 
