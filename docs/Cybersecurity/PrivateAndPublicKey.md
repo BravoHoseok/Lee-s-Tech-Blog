@@ -23,7 +23,7 @@ nav_order: 3
 {: .highlight }
 
 ## Example of Private and Public Key Relationship
-For better understanding, Let's take a look at a famous example. The two keys shall not be separated in asymmetric cryptography. In other word, they have relationship!
+For better understanding, Let's take a look at a famous example. The two keys shall not be separated in asymmetric cryptography. In other word, they have relationship as shown in [Pic.1]
 
 {: .highlight }
 Bob wants to send Alice an encrypted email. To do this, Bob takes Alice’s public key and encrypts his message to her. Then, when Alice receives the message, she takes the private key that is known only to her in order to decrypt the message from Bob. Although attackers might try to compromise the server and read the message, they will be unable to because they lack the private key to decrypt the message. Only Alice will be able to decrypt the message as she is the only one with the private key. And, when Alice wants to reply, she simply repeats the process, encrypting her message to Bob using Bob’s public key.
@@ -36,7 +36,7 @@ Bob wants to send Alice an encrypted email. To do this, Bob takes Alice’s publ
 
 
 ## Reference
-Please refer to the listed reference below. That help you understand what is Private and Public Key.
+Please refer to the listed reference below. That help you understand what is Private and Public Key in deatil.
 - [PRNG Overview]
 - [PRNG Mathmetical Explanation]
 - [PRNG Wikipedia]
@@ -48,7 +48,7 @@ Please refer to the listed reference below. That help you understand what is Pri
 - [Next Bit Test]
 - [DRNG Explanation]
 - [NIST]
-
+- [PRNG KOR Explaination]
 ## Deep Dive
 1. <b>Random Number</b>
     * Before diving into private key, we need to look at the meaning of Random Number, because a private key is generated based on randomness.
@@ -89,7 +89,7 @@ Please refer to the listed reference below. That help you understand what is Pri
       *  Feed the generated private key into ECC.
       *  Execute Dot Operand (n times).
       *  Extract x and y coordinates of the final point of ECC. The result shall be a generated public key.
-      *  The real example of private and public key is shown in <b>Pic.2</b>
+      *  The real example of private and public key is shown in <b>[Pic.2]</b>
    *  Based on PKC, you will face two famous crypto algorithm. 'RSA Public Key Algorithm' and Elliptic Curve Digital Signature Algorithm (ECDSA)'
    *  So, as long as a issued certificate to a user is not hijacked by attackers, it is hard for them to break this cryptography system theoretically.
 
@@ -118,3 +118,4 @@ Please refer to the listed reference below. That help you understand what is Pri
 [NIST]:https://csrc.nist.gov/glossary/term/deterministic_random_bit_generator
 [Symmetric Cryptography]:(https://www.ibm.com/docs/en/ztpf/2020?topic=concepts-symmetric-cryptography)
 [Asymmetric Cryptography]:https://www.ibm.com/docs/tr/zos/2.4.0 topic=security-asymmetric-algorithm-public-key-cryptography
+[PRNG KOR Explaination]:https://gngsn.tistory.com/92
