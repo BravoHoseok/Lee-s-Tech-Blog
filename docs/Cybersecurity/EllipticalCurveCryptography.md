@@ -30,6 +30,7 @@ Please refer to the listed reference below. That help you understand what is ECC
 - [ECC Mathmetical Explanation]
 - [Trapdoor Wikipedia definition]
 - [ECC Research paper]
+- [Dot Operand Law]
 
 ## Deep Dive
 1. <b>Elliptical Curve Cryptography</b>
@@ -47,7 +48,8 @@ Please refer to the listed reference below. That help you understand what is ECC
     * <p align="center">
     <img src="../../../asset/images/DotOperand.jpg" width="300"/>
     <br><b>[Pic.4] Dot Operand</b></p>
-    * 'n' times dot operation means that we do 1 time dot operation by 'n' times. With this principle, we genearte <b>'Private and Public'</b> key.
+    * 'n' times dot operation means that we do 1 time dot operation by 'n' times. With this principle, we genearte <b>'Private and Public'</b> key system.
+    * Dot Operand has more complex law than the above simple explanation. More details can be found at section 2.1 Geometric addition in [Dot Operand Law] document. 
 3. <b>ECC Domain Parameter</b>
     * <b>p:</b> modulo prime number.
     * <b>a:</b> coefficient of the elliptical curve.
@@ -56,10 +58,10 @@ Please refer to the listed reference below. That help you understand what is ECC
     * <b>n:</b> order of point G, which makes G infinite. Ideally, the maximum size of a private key should be ’n’ satisfiying the below equation.
     * <p align="center">
     <img src="../../../asset/images/InfiniteEq.jpg" width="80"/>
-    <br><b>[Pic.5] Satisfaction Condition</b></p>
+    <br><b>[Pic.5] Ideal Condition</b></p>
     * <b>H:</b> the Cofactor
 
-## Example of domain parameter (secp256k1)
+## Example of ECC domain parameter (secp256k1)
 ```scss
 p: FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFC2F
 a: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
@@ -77,3 +79,4 @@ Parameters we saw are nothing but positive integer. For better understanding, th
 [ECC Mathmetical Explanation]:https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/
 [Trapdoor Wikipedia definition]:https://en.wikipedia.org/wiki/Trapdoor_function
 [ECC Research paper]:https://www.secg.org/sec1-v2.pdf
+[Dot Operand Law]:https://hal.science/hal-01914807/document
