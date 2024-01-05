@@ -59,7 +59,7 @@ Please refer to the listed reference below. That help you understand what is ECC
     * <p align="center">
     <img src="../../../asset/images/InfiniteEq.jpg" width="80"/>
     <br><b>[Pic.5] Ideal Condition</b></p>
-    * <b>H:</b> the Cofactor
+    * <b>H:</b> Cofactor
 
 ## Example of ECC domain parameter (secp256k1)
 ```scss
