@@ -34,7 +34,7 @@ Please refer to the listed reference below. That help you understand what is ECD
 
 2. <b> Digital Signature </b>
    * As simplified explanation, Digital Signature based on ECDSA is a set of <b>_'r'_</b> and <b>_'s'_</b>, which are 32 byte positive integer respectively. The <b>_'r'_</b> and <b>_'s'_</b> are computed by Elliptical Curve and Private and Public Key. Then, they are appended at the end of certificate or message. We call them Digtal Signautre and the object is signed.
-   * A receiver will get these two values and verify the received <b>_'s'_</b> value with the received <b>_'r'_</b>, crypto information menteiond in the certificate and ECC.
+   * A receiver will get these two values and verify the received <b>_'s'_</b> with the received <b>_'r'_</b>, crypto information menteiond in the certificate and ECC.
    * In other word, we reconstruct <b>_'s1'_</b> based on the received <b>_'r'_</b> and the information in the certificate. Then compare <b>_'s1'_</b> to the received <b>_'s'_</b> and check if they are same. If not, the received data is fabricated.
 
 3. <b> Mathematical Explanation (r, v) and Digital Signature Verification </b>
