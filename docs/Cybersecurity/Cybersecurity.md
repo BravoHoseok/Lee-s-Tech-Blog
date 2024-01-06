@@ -8,5 +8,5 @@ permalink: /docs/Cybersecurity
 
 # Cybersecurity Topics
 
-To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed.
+I summarized cyber security-related knowledge that I got, when conducting automotive embedded software role in my job. Especially, if you work on AUTOSAR platform, you will face this kind of topic to configure Crypto Stack and utilize Hardware Security Module (HSM) component. Hope these contents paves the way for your cybersecurity job.
 {: .fs-6 .fw-300 }
