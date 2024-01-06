@@ -2,7 +2,7 @@
 layout: default
 title: 2_Elliptic Curve Digital Signature Algorithm (ECDSA)
 parent: Topic_Cybersecurity
-nav_order: 5
+nav_order: 10
 ---
 
 # Elliptic Curve Digital Signature Algorithm (ECDSA)
@@ -33,7 +33,7 @@ Please refer to the listed reference below. That help you understand what is ECD
    * ECDSA is also used for Transport Layer Security (TLS), the successor to Secure Sockets Layer (SSL), by encrypting connections between web browsers and a web application. The encrypted connection of an HTTPS website, illustrated by an image of a physical padlock shown in the browser, is made through signed certificates using ECDSA.
 
 2. <b> Digital Signature </b>
-   * As simplified explanation, Digital Signature based on ECDSA is a set of <b>_'r'_</b> and <b>_'s'_</b>, which are 32 bytes positive integer respectively. The <b>_'r'_</b> and <b>_'s'_</b> are computed by Elliptical Curve and Private and Public Key. Then, they are appended at the end of certificate or message. We call them Digtal Signautre and the object is signed.
+   * As simplified explanation, Digital Signature based on ECDSA is a set of <b>_'r'_</b> and <b>_'s'_</b>, which are 32 byte positive integer respectively. The <b>_'r'_</b> and <b>_'s'_</b> are computed by Elliptical Curve and Private and Public Key. Then, they are appended at the end of certificate or message. We call them Digtal Signautre and the object is signed.
    * A receiver will get these two values and verify the received <b>_'s'_</b> value with the received <b>_'r'_</b>, crypto information menteiond in the certificate and ECC.
    * In other word, we reconstruct <b>_'s1'_</b> based on the received <b>_'r'_</b> and the information in the certificate. Then compare <b>_'s1'_</b> to the received <b>_'s'_</b> and check if they are same. If not, the received data is fabricated.
 
