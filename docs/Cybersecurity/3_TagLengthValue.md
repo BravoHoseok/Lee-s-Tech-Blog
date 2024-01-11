@@ -2,7 +2,7 @@
 layout: default
 title: 3_Tag Length Value (TLV)
 parent: Topic_Cybersecurity
-nav_order: 10
+nav_order: 6
 ---
 
 # Private and Public Key
@@ -27,8 +27,8 @@ Tag Length Value (TLV) is the encoding rule proposed by X.509 organization. The 
 ## Reference
 Please refer to the listed reference below. That help you understand what is TLV in deatil.
 - [Tag Length Value Explanation]
-- [ANS.1 Tag Type]
-- [ANS.1 and BER and DER]
+- [ASN.1 Tag Type]
+- [ASN.1 and BER and DER]
 - [Certificate Introduction]
 - [Value in TVL format]
 
@@ -62,8 +62,8 @@ Please refer to the listed reference below. That help you understand what is TLV
       * <b><span style="color:Gray;">Value:</span></b> This field is binary byte array of the specified length, which shall represent recursive sub-tree.
 
 [Tag Length Value Explanation]:https://docs.yubico.com/yesdk/users-manual/support/support-tlv.html#length
-[ANS.1 Tag Type]:https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference.html
+[ASN.1 Tag Type]:https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference.html
 [BER-TLV]:https://pypi.org/project/ber-tlv/
-[ANS.1 and BER and DER]:https://luca.ntop.org/Teaching/Appunti/asn1.html
+[ASN.1 and BER and DER]:https://luca.ntop.org/Teaching/Appunti/asn1.html
 [Certificate Introduction]:https://letsencrypt.org/docs/a-warm-welcome-to-asn1-and-der/
 [Value in TVL format]:https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/basic-encoding-rules.html

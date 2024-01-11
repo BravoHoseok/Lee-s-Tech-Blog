@@ -2,7 +2,7 @@
 layout: default
 title: 2_Elliptic Curve Digital Signature Algorithm (ECDSA)
 parent: Topic_Cybersecurity
-nav_order: 10
+nav_order: 5
 ---
 
 # Elliptic Curve Digital Signature Algorithm (ECDSA)
