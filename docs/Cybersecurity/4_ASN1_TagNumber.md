@@ -53,7 +53,7 @@ Please refer to the listed reference below. That help you understand what is TLV
    *  The Value field contains a leading byte that specifies the number of bits left unused in the final byte of content.
    *  For example, In <b>[Pic.2]</b>, the last 5 bits are not used.
    <p align="center">
-    <img src="../../../asset/images/BitStringEx.JPG" width="600"/>
+    <img src="../../../asset/images/BITStringEx.JPG" width="600"/>
     <br><b>[Pic.2] Bit String Example</b></p>
 
 3. Octet String (Tag: 0x04)
