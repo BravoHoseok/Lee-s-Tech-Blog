@@ -85,7 +85,7 @@ Please refer to the listed reference below. That help you understand what is TLV
    *  As an example, Object Identification will be written with <b>1.2.840.113549.1.7.1</b>
    *  We will see the Encoding/Decoding rule of Object Identifier in [5_ASN1_ObjectIdentifier] chapter in detail, because they are not attached to certificate as the plan form.
    <p align="center">
-    <img src="../../../asset/images/ObjectIdentifier.JPG" width="400"/>
+    <img src="../../../asset/images/objectidentifier.JPG" width="400"/>
     <br><b>[Pic.6] Object Identifier Example</b></p>
 
 
