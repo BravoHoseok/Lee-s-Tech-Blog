@@ -26,7 +26,7 @@ Please refer to the listed reference below. That help you understand what is TLV
 - [Object Identifier of ASN1]
 
 ## Deep Dive
-1. Specific Tyeps and Tags
+1. Tyeps and Tags
    * Let's take a look at the table below. We cna figure out which tag corresponds to a type, and they are defined by ASN.1.
 
         |       Type       | Tag (dec) |       Type        | Tag (dec) |       Type      | Tag (dec) |          
