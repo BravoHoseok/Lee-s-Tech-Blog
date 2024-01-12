@@ -5,7 +5,7 @@ parent: Topic_Cybersecurity
 nav_order: 6
 ---
 
-# Private and Public Key
+# Tag Length Value (TLV)
 {: .no_toc }
 
 ## Table of contents

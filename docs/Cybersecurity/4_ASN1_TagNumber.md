@@ -5,7 +5,7 @@ parent: Topic_Cybersecurity
 nav_order: 7
 ---
 
-# Private and Public Key
+# ASN.1 Types and Tags
 {: .no_toc }
 
 ## Table of contents
@@ -20,13 +20,13 @@ nav_order: 7
 To ensure that encodings are not ambiguous, every ASN.1 type is associated with a tag. A tag consists of two parts: the class and the number as we saw at [3_Tag Length Value] chapter. TLV encoding may be recursive (netest construction, constructed format). One value field can consist of one or more other TLVs, which are encoded. No maximum level of nesting is defined, so complex structures can be created. The porperty of Tag is unique. However, the same tag to two (or more) can be assigned to different types, but should avoid ambiguity. The context in which an instance of the type occurs must be sufficient to allow unique identification.
 
 ## Reference
-Please refer to the listed reference below. That help you understand what is TLV in deatil.
+Please refer to the listed reference below. That help you understand what is ASN.1.
 - [ASN1 Tyep and Tag]
 - [ASN1 Type]
 - [Object Identifier of ASN1]
 
 ## Deep Dive
-1. Tyeps and Tags
+1. <b>Tyeps and Tags</b>
    * Let's take a look at the table below. We cna figure out which tag corresponds to a type, and they are defined by ASN.1.
 
         |       Type       | Tag (dec) |       Type        | Tag (dec) |       Type      | Tag (dec) |          
@@ -36,7 +36,7 @@ Please refer to the listed reference below. That help you understand what is TLV
         | BOOLEAN          | 01        | INTEGER           | 02        | TeletexString   | 20        |
         | CHARACTER STRING | 29        | NULL              | 05        | T61String       | 20        |
         | CHOICE           |           | NumericString     | 18        | TIME            | 14        |
-        | DATE             | 31        | ObjectDescriptor  | 07        | TIME-OF-DAY     | 32        |
+        | DATE             | 31        | ObjectDescriptor  | 07        | TIME OF DAY     | 32        |
         | DATE-TIME        | 33        | OBJECT IDENTIFIER | 06        | UniversalString | 28        |
         | DURATION         | 34        | OCTET STRING      | 04        | UTCTime         | 23        |
         | EMBEDDED PDV     | 11        | PrintableString   | 19        | UTF8String      | 12        |
@@ -48,7 +48,7 @@ Please refer to the listed reference below. That help you understand what is TLV
    * As an example, if we use Universal Class, Primitive TLV, and Tag 03, then the tag field value will be 00h + 0h + 03h = 0x03.
    * Let's take a look at a couple of tag. The details and more information can be found at [ASN1 Tyep and Tag]
 
-2. Bit String (Tag: 0x03)
+2. <b>Bit String (Tag: 0x03)</b>
    *  The corresponding Value field to ASN.1 BIT STRING type is <b>arbitrary length strings of bits.</b>
    *  The Value field contains a leading byte that specifies the number of bits left unused in the final byte of content.
    *  For example, In <b>[Pic.2]</b>, the last 5 bits are not used.
@@ -56,7 +56,7 @@ Please refer to the listed reference below. That help you understand what is TLV
     <img src="../../../asset/images/BITStringEx.JPG" width="600"/>
     <br><b>[Pic.2] Bit String Example</b></p>
 
-3. Octet String (Tag: 0x04)
+3. <b>Octet String (Tag: 0x04)</b>
    *  Octet String is similar to Bit String data types. But one difference is Octet String cannot have unused bits.
    *  The leading bytes must not be added to the contents.
    *  Example is shown in <b>[Pic.3]</b>.
@@ -64,14 +64,14 @@ Please refer to the listed reference below. That help you understand what is TLV
     <img src="../../../asset/images/Octet.JPG" width="500"/>
     <br><b>[Pic.3] Octet String Example</b></p>  
 
-4. Boolean (Tag: 0x01)
+4. <b>Boolean (Tag: 0x01)</b>
    * The value of type Boolean can be TRUE(0x00) or FALSE(0xFF).
    * The example is shown in <b>[Pic.4]</b>.
    <p align="center">
     <img src="../../../asset/images/Boolean.JPG" width="500"/>
     <br><b>[Pic.4] Boolean Example</b></p>
 
-5. Integer (Tag: 0x02)
+5. <b>Integer (Tag: 0x02)</b>
    * The value of integer contains the encoded integer if it is positive, or its two's complement if it is negative.
    * If the integer is positive but the high order bit is set to 1, a leading 0x00 is added to the content to indicate that the number is not negative.
    * The example is shown in <b>[Pic.5]</b>.
@@ -79,7 +79,7 @@ Please refer to the listed reference below. That help you understand what is TLV
     <img src="../../../asset/images/Integer.JPG" width="500"/>
     <br><b>[Pic.5] Integer Example</b></p>
 
-6. Object Identifier (Tag: 0x06)
+6. <b>Object Identifier (Tag: 0x06)</b>
    *  Object Identifier is composed of the combination of number and dot.
    *  The type of Object Identifier is listed in [Object Identifier of ASN1].
    *  As an example, Object Identification will be written with <b>1.2.840.113549.1.7.1</b>
