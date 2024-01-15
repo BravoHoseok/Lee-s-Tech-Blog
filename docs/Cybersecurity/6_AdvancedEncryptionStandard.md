@@ -28,7 +28,13 @@ Please refer to the listed reference below. That help you understand what is AES
 - [AES Lecture Note Purdue]
 - [Substitute Bytes Transformation]
 - [Multiplicative Inverse]
+- [AES Basic]
+- [AES Animation Explanation]
+- [Galua Field - Kor Lecture]
+- [Multiplicative Inverse]
+- [Multiplecative Inverse Cal]
 
+ 
 ## Deep Dive
 1. <b>Advanced Encryption Stnadard (AES)</b>
    * In this chapter, we will take a look at AES128-CBC (Cipher Block Changing) and AES128-ECB (Electronic codebook) which are used normally.
@@ -120,7 +126,7 @@ Please refer to the listed reference below. That help you understand what is AES
       * The specific calucation of MI and Bit Scrambling can be found at [Multiplecative Inverse Cal] and [AES Lecture Note Purdue] repectively
 
    2. <b>Shift Rows</b>
-      * Shift Rows is depcited in animation at [AES Animation Explanation]
+      * Animated-Shift Rows can be found in [AES Animation Explanation]
       * The rule of shift rows is as follows.
         * <b><span style="color:Greenyellow"> Not shifting</span></b> the first row of the state array at all.
         * Circularly shifting the second row by <b><span style="color:Greenyellow"> one</span></b> byte to the left.
