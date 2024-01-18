@@ -17,8 +17,7 @@ nav_order: 9
 ---
 
 ## Definition
-Advanced Encryption Standard (AES) is the encryption standard set by the U.S. National Institute of Standards and Technology (NIST) in 2001, which is a type of 
-symmetric cryptography. It means that the two objects have the same secret key that should not be revealed to attackers. AES is widely used today as it is a much stronger than DES and triple DES despite being harder to implement. In the past, older encryption methods were sufficient for protecting sensitive information, but they no longer meet today's security needs. That's where AES encryption comes in. AES offers a high level of security and has become the go-to choice for encrypting sensitive data.
+Advanced Encryption Standard (AES) is the encryption standard set by the U.S. National Institute of Standards and Technology (NIST) in 2001, which is a type of symmetric cryptography. It means that the two objects have the same secret key that should not be revealed to attackers. AES is devised firstly by two Belgian cryptographers, Joan Daemen and Vincent Rijmen, who submitted a proposal to NIST. In this proposal, they proposed 'Rijndael' algorithm that is a family of ciphers with different key and block sizes. AES is widely used today as it is a much stronger than DES and triple DES despite being harder to implement. In the past, older encryption methods were sufficient for protecting sensitive information, but they no longer meet today's security needs. That's where AES encryption comes in. AES offers a high level of security and has become the go-to choice for encrypting sensitive data.
 
 ## Reference
 Please refer to the listed reference below. That help you understand what is AES.
@@ -34,11 +33,12 @@ Please refer to the listed reference below. That help you understand what is AES
 - [Multiplecative Inverse and how to extract S-Box Table]
 - [How to calculate Mix Column-Kor] 
 - [AES Explanation from Microchip]
+- [AES Step By Step Hands On]
 
 
 ## Deep Dive
 1. <b>Advanced Encryption Stnadard (AES)</b>
-   * In this chapter, we will take a look at AES128-CBC (Cipher Block Changing) and AES128-ECB (Electronic codebook) which are used normally.
+   * In this chapter, we will take a look at AES128-CBC (Cipher Block Changing) and AES128-ECB (Electronic codebook) which are used widely.
    * AES has several mode according to specific formulas which is used in encryption process as shown in <b>[Pic.1]</b>
     <p align="center">
     <img src="../../../asset/images/AESMODE.JPG" width="700"/>
@@ -58,7 +58,7 @@ Please refer to the listed reference below. That help you understand what is AES
     <img src="../../../asset/images/AESMATRIX.JPG" width="300"/>
     <br><b>[Pic.2] AES128 Matrix Notation</b></p> 
 
-   * Note that, Notice that the first four bytes of a 128-bit input block occupy the first column in the 4 × 4 array of bytes. The next four bytes occupy the second column, and so on.
+   * Note that the first four bytes of a 128-bit input block occupy the first column in the 4 × 4 array of bytes. The next four bytes occupy the second column, and so on.
    
    {: .highlight }
    > The 4 × 4 array of bytes shown above is referred to as <b><span style="color:Greenyellow"> the state array in AES!!</span></b>
@@ -81,7 +81,7 @@ Please refer to the listed reference below. That help you understand what is AES
    * The four column words of the key array are expanded into a schedule of 44 words as shown in <b>[Pic.4]</b> (Kn represents a word).
 
    {: .highlight } 
-   > Note that the reason of this expansion is that AES128-CBC conducts 10 rounds and each round consumes four words from the key schedule. Thus, <b><span style="color:Greenyellow"> the resulting size of this expansion shall be 40 word.</span></b> For the first 4 words of 44 words, they are used for adding to the input state array before any round-based processing can begin, and the remaining 40 words used for the ten rounds of processing that are required for the case a 128-bit encryption key.
+   > Note that the reason of this expansion is that AES128-CBC conducts 10 rounds and each round consumes four words from the key schedule. Thus, <b><span style="color:Greenyellow"> the resulting size of this expansion shall be 40 word.</span></b> For the first 4 words of 44 words, they are used for adding to the input state array before any round-based processing can begin. This 4 words is called Initial Vector. And the remaining 40 words used for the ten rounds of processing that are required for the case a 128-bit encryption key.
    
     <p align="center">
     <img src="../../../asset/images/ExpandedKey.JPG" width="500"/>
@@ -180,17 +180,29 @@ Please refer to the listed reference below. That help you understand what is AES
          <img src="../../../asset/images/KeyExpansion2.JPG" width="500"/>
          <br><b>[Pic.11] Key Expansion Processing Step</b></p>
 
+
+      * You can get high level intution of the entire process of AES encryption in <b>[Pic.12]</b>.
+      <p align="center">
+      <img src="../../../asset/images/AESBlockDiagram.JPG" width="700"/>
+      <br><b>[Pic.12] AES Block Cipher Process</b></p>
+
    2. <b>Decryption</b>
-      * The decryption process is similar to ecryption process as shown in <b>[Pic.12]</b> Let's take a look at the corresponding inverse steps.
+      * The decryption process is a straightforward reverse of the encryption algorithm as shown in <b>[Pic.13]</b>. Let's take a look at the corresponding reverse steps.
       <p align="center">
       <img src="../../../asset/images/AESDecryptFlowChart.JPG" width="500"/>
-      <br><b>[Pic.12] AES Decryption Flow Chart</b></p>
+      <br><b>[Pic.13] AES Decryption Flow Chart</b></p>
 
       * <b>Step 1: Inverse Shift Rows</b>
-        * 
+        * For encryption, we did the circularly left-shifting by 0, 1, 2, and 3 for each row. For decryption, we do the circularly right-shifting by 0, 1, 2, and 3
       * <b>Step 2: Inverse Substitue Bytes Transformation</b>
+        * For InvSub, we utilize another look up table as shown in [Pic.14], which is called 'Inverse S-Box'.
+        <p align="center">
+         <img src="../../../asset/images/InvSBox.JPG" width="500"/>
+         <br><b>[Pic.14] S-Box for Decryption</b></p> 
       * <b>Step 3: Add round key</b>
+        * XOR computation with a key and a encrypted input.
       * <b>Step 4: Inverse Mix Columns</b>
+        * This step is exactly the inverse process of MixColumns used for encryption. It performs a matrix multiplication of the state with a static matrix.
 
 [Blcok Cipher Mode]:https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
 [Plaintest Wikipedia]:https://en.wikipedia.org/wiki/Plaintext
@@ -205,3 +217,4 @@ Please refer to the listed reference below. That help you understand what is AES
 [How to calculate Mix Column-Kor]:https://hipolarbear.tistory.com/36
 [AES Explanation from Microchip]:https://onlinedocs.microchip.com/pr/GUID-E67D40A5-DD02-4379-82B4-9BE2A7E7BEA0-en-US-3/index.html?GUID-4BCE9427-FF62-4374-8F90-0C87F18BDC44
 [AES Decryption Explanation]:https://www.herongyang.com/Cryptography/AES-Standard-Decryption-Algorithm.html
+[AES Step By Step Hands On]:https://www.cryptool.org/en/cto/aes-step-by-step
