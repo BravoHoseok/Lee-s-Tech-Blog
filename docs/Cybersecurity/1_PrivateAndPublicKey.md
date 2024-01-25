@@ -49,6 +49,7 @@ Please refer to the listed reference below. That help you understand what is Pri
 - [DRNG Explanation]
 - [NIST]
 - [PRNG KOR Explaination]
+- [Public Key System Video]
 
 ## Deep Dive
 1. <b>Random Number</b>
