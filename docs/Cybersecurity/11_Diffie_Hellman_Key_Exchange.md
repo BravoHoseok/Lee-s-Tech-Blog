@@ -25,3 +25,6 @@ Please refer to the listed reference below. That help you understand what is Bas
 ## Terminology
 
 ## Deep Dive
+
+[Diffie Hellman Key Exchange Overview]:https://www.comparitech.com/blog/information-security/diffie-hellman-key-exchange/
+[Diffie Hellman Key Exchange Explanation by MS]:https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=19c9149db0b3c82644e70d3b2d5b3c3b91ae087d
