@@ -17,7 +17,7 @@ nav_order: 8
 ---
 
 ## Definition
-Object Identifier (OID) used in ASN.1 system shall be encoded and decoded by following a specific rule. This rule shall be a subset of Basic Encoding Rule (BER) or Distinguished Encoding Rule (DER). The specific encoding and decoding rule shall only correspond to OID. I reffered the idea describing how to encode and decode OID at [OID Encoding and Decoding Rule]. In this chapter, I will elaborate the rule based on <b>[Pic.1].</b>
+Object Identifier (OID) used in ASN.1 system shall be encoded and decoded based on a specific rule, <b><span style="color:Greenyellow"> which similar to Base64 Encoding and Decoding</span></b>. This rule shall be a subset of Basic Encoding Rule (BER) or Distinguished Encoding Rule (DER). The specific encoding and decoding rule shall only correspond to OID. I reffered the idea describing how to encode and decode OID at [OID Encoding and Decoding Rule]. In this chapter, I will elaborate the rule based on <b>[Pic.1].</b>
 
 <p align="center">
     <img src="../../../asset/images/OID.JPG" width="500"/>
