@@ -18,10 +18,10 @@ nav_order: 17
 
 ## Definition
 
-
 ## Reference
 Please refer to the listed reference below. That help you understand what is Base64.
 
 ## Terminology
+
 
 ## Deep Dive
