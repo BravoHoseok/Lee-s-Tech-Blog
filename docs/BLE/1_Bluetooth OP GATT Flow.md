@@ -24,9 +24,9 @@ nav_order: 4
 
 ## Deep Dive
 1. <b> BLE Stack Architecture</b>: is made of three levels, APPs, HOST, and CONTROLLERS. Each level has corresponding components.
-<p align="center">
-<img src="../../../asset/images/BLEStack.JPG" width="300"/>
-<br><b>[Pic.1] BLE Stack Architecture </b></p>
+   <p align="center">
+   <img src="../../../asset/images/BLEStack.JPG" width="300"/>
+   <br><b>[Pic.1] BLE Stack Architecture </b></p>
 
    * <b>Physical Layer (PHY)</b>: It refers to the physical radio used for communication and for modulating/demodulating the data. It operates in the ISM band (2.4 GHz spectrum).
    * <b>Link Layer</b>: It is the layer that interfaces with the Physical Layer (Radio) and provides the higher levels an abstraction and a way to interact with the radio (through an intermediary level called the HCI layer which we’ll discuss shortly). It is responsible for managing the state of the radio as well as the timing requirements for adhering to the Bluetooth Low Energy specification.
@@ -47,9 +47,9 @@ nav_order: 4
     * A Client is the device that interfaces with the Server with the purpose of reading the Server’s exposed data and/or controlling the Server’s behavior.
 
 2. <b>GATT</b>: has the hierachical concept which is composed of attribute, service, characteristic, and profile. Such concept is dedicitaed to low-power energy consumption. A discovery of services, characteristics and descriptors is required for the GATT to operate. Thus, We need to understand them, as it builds the foundation for further data transactions. The example of the hierachical structure can be found in the picture below.
-<p align="center">
-<img src="../../../asset/images/GATT.JPG" width="300"/>
-<br><b>[Pic.2] GATT Structure </b></p>
+   <p align="center">
+   <img src="../../../asset/images/GATT.JPG" width="300"/>
+   <br><b>[Pic.2] GATT Structure </b></p>
 
    * Attribute: An attribute is a data representation format which is exposed by the server to the client. It is composed of four fields
     * Type Description
