@@ -12,7 +12,7 @@ permalink: /
 # Welcome to Lee's Embedded Software Research Lab!
 {: .fs-8}
 
-This is the blog containing knowledge about Embedded Software. Hope you find insights for learning Embedded Software. For my portfolio and linkedin, please click the buttons below.
+This is the blog containing knowledge about Embedded Software. Hope you find insights for learning it. For my portfolio and linkedin, please click the buttons below.
 {: .fs-6 .fw-300}
 
 [Linkedin][hoseok-linkedin]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
