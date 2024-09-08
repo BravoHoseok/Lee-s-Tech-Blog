@@ -138,7 +138,7 @@ if( pucAlignedHeap == NULL )
 
 Can you guess what the meaning of ``` value & ~0x00000007 ``` is? It represents the quotient of the value, which is devided by 8, then multiply the quotient by 8. That is ``` quotient = (value / 8), then quotient * 8 ```
 
-The interesting thing is that if the address of ```ucHeap[7]``` is aligned based on 8 bytes (e.g., 8 (decimal), 16 (decimal), 32 (decimal)), the heap wastes 8 bytes, as shown in <b>[Pic.9]</b>. The table below shows the wasted bytes according to the address. If we align based on the address of ```ucHeap[0]```, we can reduce the wasted bytes by 1 byte compared to aligning based on the address of ```ucHeap[7]```, as shown in the table below.
+The interesting thing is that if the address of ```ucHeap[7]``` is aligned based on 8 bytes (e.g., 8 (decimal), 16 (decimal), 32 (decimal)), the heap wastes 8 bytes, as shown in <b>[Pic.9]</b>. The table below shows the wasted bytes according to the address. If we align based on ```ucHeap[0]```, we can reduce the wasted bytes by 1 byte compared to the alignment based on ```ucHeap[7]```, as shown in the table below.
 {: .highlight }
 
 |&ucHeap[7]|Wasted Bytes|&ucHeap[0]|Wasted Bytes|
