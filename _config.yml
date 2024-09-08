@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Lee's Tech Blog
+title: Lee's Research Lab
 email: embedevlee@gmail.com
-description: Lee's Tech Blog for Embedded Software
+description: Lee's Embedded Software Research Lab
 #baseurl: "https://github.com/BravoHoseok/Lee-s-Tech-Blog"
 url: "https://bravohoseok.github.io/Lee-s-Tech-Blog"
 github_username: bravohoseok

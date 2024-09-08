@@ -7,6 +7,5 @@ permalink: /docs/MasteringFreeRTOS
 ---
 
 # FreeRTOS Topics
-
-I summarized Makefile-related knowledge that I got, when conducting automotive embedded software role in my job. To build a software platform, the first step shall be establising makefile system with a compiler so that all of c and h files are compiled. Hope these contents paves the way for your engineering job.
+The ```TABLE OF CONTENTS``` below represents the list of FreeRTOS topics that I analyzed in detail. These chapters will pave the way for a side project where I will port FreeRTOS onto the TC275 microprocessor.
 {: .fs-6 .fw-300 }
