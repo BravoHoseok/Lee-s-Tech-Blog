@@ -90,7 +90,7 @@ The last step of `pvPortMalloc` is memory allication of the requested size. <b>[
         <br><b>[Pic.7] prvInsertBlockIntoFreeList Code Snippet</b>
     </p>
 
-6. In <b>[Pic.7]</b>, `pxBlockToInsert` is `pxNewBlockLink`, pointing to the address of `ucHeap[16]` in this case. The 'for' statement is used to make `pxIterator` point to the correct position (which should be `xStart`). Then, lines 151 and 152 in <b>[Pic.7]</b> create connections `3` and `4` in <b>[Pic.6]</b> step 3. If you look at <b>[Pic.6]</b>, you can understand how the connections between free blocks are created step by step. <b><span style="color:Greenyellow">The 'for' statement is key to creating the linked list of free blocks in ascending size order.</span></b> We will see the details in a later section.
+6. In <b>[Pic.7]</b>, `pxBlockToInsert` is `pxNewBlockLink`, pointing to the address of `ucHeap[16]` in this case. The 'for' statement is used to make `pxIterator` point to the correct position (which should be `xStart`). Then, lines 151 and 152 in <b>[Pic.7]</b> create connections `3` and `4` in <b>[Pic.6]</b> step 3. If you look at <b>[Pic.6]</b>, you can understand how the connections between free blocks are created step by step. <b><span style="color:Greenyellow">The 'for' statement is the key to create the linked list of free blocks in ascending size order.</span></b> We will see the details in a later section.
  
  The result after `pvPortMalloc(8)` is shown in <b>[Pic.8]</b> in detail. The blue-colored region in the ucHeap array is allocated. The interesting point of this region is that the MSB of `ucHeap[7]` is masked with 1 to represent that this block is allocated. That is the reason why the value of `ucHeap[7]` is `0x80`.
 
