@@ -47,7 +47,7 @@ The next step is initialization process to make a linked list. <b>[Pic.3]</b> sh
 </p>
 
 
-When we expand 371 line, that will be shown like below. That is, `pucAlignedHeap` points the `ucHeap[0]` address, if the address of `ucHeap[7]` ends with 7, which represent that it aligned by 8.
+When we expand 371 line, that will be shown like below. That is, `pucAlignedHeap` points the `ucHeap[0]` address, if the address of `ucHeap[7]` ends with 7, which represent that it is aligned by 8 correctly.
 
 ```c
 pucAlignedHeap = ( uint8_t * ) ( ( ( portPOINTER_SIZE_TYPE ) & ucHeap[ portBYTE_ALIGNMENT - 1 ] ) & ( ~( ( portPOINTER_SIZE_TYPE ) portBYTE_ALIGNMENT_MASK ) ) );
