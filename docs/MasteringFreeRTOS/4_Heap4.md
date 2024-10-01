@@ -17,7 +17,7 @@ nav_order: 10
 ---
 
 # 1. Introduction
-<b><span style="color:Greenyellow">'First-fit'</span></b> algorithm is used in Heap4 to improve memory leakage problem caused by Heap2. 'First-fit' algorithm provide combining the adjecent free blocks to one large block. We will see how the algorithm work.
+<b><span style="color:Greenyellow">'First-fit'</span></b> algorithm is used in Heap4 to improve memory leakage problem caused by Heap2. 'First-fit' algorithm provide combining the adjecent free blocks to one large block. Heap4 is similar to Heap2 except merging adjecent blocks and the position of `xEnd` block.  We will see how the algorithm works.
 
 # 2. First-fit Algorithm
 

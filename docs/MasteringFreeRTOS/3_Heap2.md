@@ -17,7 +17,7 @@ nav_order: 9
 ---
 
 # 1. Introduction
-As mentioned in [HeapMemoryManagement], Heap2 is superseded by Heap4. The main reasons I think is that <b><span style="color:Greenyellow">'Best-fit'</span></b> algorithm that Heap2 has adopted is vulnerable to memory leakage problem, since the algirhtm does not combine the adjecent free memory blocks into one large free block. We will see how the algorithm work.
+As mentioned in [HeapMemoryManagement], Heap2 is superseded by Heap4. The main reasons I think is that <b><span style="color:Greenyellow">'Best-fit'</span></b> algorithm that Heap2 has adopted is vulnerable to memory leakage problem, since the algirhtm does not combine the adjecent free memory blocks into one large free block. We will see how the algorithm works.
 
 # 2. Best-fit Algorithm
 The best-fit algorithm finds a free block that is closest to the requested block size. To do this, when executing `vPortFree` to release an occupied block, it arranges the free blocks in a linked list in ascending size order. This way, the algorithm does not need to check the size of each free block in every search loop to see if it matches the requested block size. For example, the free blocks might be aligned like 5 bytes -> 25 bytes -> 100 bytes. If the requested block size is 20 bytes, the algorithm will search from the 5 bytes block and stop at the 25 bytes block, as the 25-byte block is sufficient to allocate the requested 20 bytes. However, one disadvantage of Heap2 is that it does not combine the 25 bytes and 100 bytes blocks, even if the two free blocks are adjacent.
